@@ -1,0 +1,105 @@
+* {
+  outline: none;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+td {
+  padding: 0;
+}
+
+#result {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 100;
+  text-align: right;
+  padding-right: 20px;
+  position: absolute;
+  bottom: 240px;
+  right: 0;
+  width: 209px;
+  height: 79px;
+  background-color: #999;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #9a9a9a;
+  border-bottom: none;
+}
+
+.number, .nan {
+  font-size: 22px;
+}
+
+.number, .d, .keyTop, .cal {
+  width: 58px;
+  height: 48px;
+  -webkit-appearance: button;
+}
+
+.number, .d {
+  background-color: #e0e0e0;
+  border: 1px solid #8e8e8e;
+}
+
+.keyTop {
+  border: 1px solid #8e8e8e;
+  background-color: #d6d6d6;
+}
+
+.cal {
+  border: 1px solid #8e8e8e;
+  background-color: #f69331;
+  border-bottom: none;
+  border-left: none;
+  color: #fff;
+}
+
+.calOne {
+  border: 1px solid #8e8e8e;
+  border-bottom: none;
+  border-left: none;
+}
+
+.calLast {
+  border-radius: 0 0 5px 0;
+  border-bottom: 1px solid #8e8e8e !important;
+}
+
+.percent {
+  border-right: 1px solid #8e8e8e !important;
+}
+
+.keyTop, .seven, .eight, .four, .five, .one, .two {
+  border-right: none;
+  border-bottom: none;
+}
+
+.nine, .six, .three {
+  border-bottom: none;
+}
+
+.two {
+  border-right: none;
+}
+
+.zero {
+  width: 116px;
+  border-right: none;
+  border-radius: 0 0 0 5px;
+}

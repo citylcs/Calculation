@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div id="container">
+        <table>
+            <tr>
+                <th><input type="text" id="result" disabled value="0"></th>
+            </tr>
+            <tr>
+                <td><input type="button" class="btn nan keyTop" onclick="ac()" value="AC" /></td>
+                <td><input type="button" class="btn nan keyTop" value="+/-" /></td>
+                <td><input type="button" class="btn nan keyTop percent" value="%" /></td>
+                <td><input type="button" class="btn nan cal calOne" value="/" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="btn number seven" value="7" /></td>
+                <td><input type="button" class="btn number eight" value="8" /></td>
+                <td><input type="button" class="btn number nine" value="9" /></td>
+                <td><input type="button" class="btn nan cal" value="*" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="btn number four" value="4" /></td>
+                <td><input type="button" class="btn number five" value="5" /></td>
+                <td><input type="button" class="btn number six" value="6" /></td>
+                <td><input type="button" class="btn nan cal" value="-" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" class="btn number one" value="1" /></td>
+                <td><input type="button" class="btn number two" value="2" /></td>
+                <td><input type="button" class="btn number three" value="3" /></td>
+                <td><input type="button" class="btn nan cal" value="+" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" class="btn number zero" value="0" /></td>
+                <td><input type="button" class="btn nan d" value="." /></td>
+                <td><input type="button" class="btn nan cal calLast" value="=" /></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    let button = document.getElementsByClassName('btn'),
+        screen = document.getElementById('result'),
+        arr = [];
+    for (let i = 0;i < button.length;i++) {
+        button[i].onclick = function () {
+            if (screen.value === '0' && this.value === '.') {
+                screen.value = '0.';
+            }
+            else {
+                if (!isNaN(this.value) || this.value === '.') {
+                    if (screen.value === '0') {
+                        screen.value = this.value;
+                    }
+                    else if (screen.value.indexOf('.') !== -1) {
+                        if (this.value !== '.') {
+                            screen.value += this.value;
+                        }
+                    }
+                    else {
+                        screen.value += this.value;
+                    }
+                }
+                else {
+                    if (this.value === '+' || this.value === '-' || this.value === '*' || this.value === '/') {
+                        arr[arr.length] = screen.value;
+                        arr[arr.length] = this.value;
+                        screen.value = '';
+                    }
+                    else if (this.value === 'AC') {
+                        screen.value = '0';
+                    }
+                    else if (this.value === '+/-') {
+                        if (screen.value > 0) {
+                            screen.value = -(screen.value);
+                        }
+                        else if (screen.value < 0) {
+                            screen.value = Math.abs(screen.value);
+                        }
+                        else {
+                            screen.value = '0';
+                        }
+                    }
+                    else if (this.value === '%') {
+                        screen.value = screen.value / 100;
+                    }
+                    else {
+                        arr[arr.length] = screen.value;
+                        screen.value = eval(arr.join(''));
+                        arr = [];
+                    }
+                }
+            }
+        }
+    }
+</script>
+</html>
