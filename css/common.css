@@ -1,5 +1,6 @@
 * {
   outline: none;
+  font-weight: 300;
 }
 
 body {
@@ -14,7 +15,7 @@ table {
   right: 0;
   bottom: 0;
   left: 0;
-  margin: auto;
+  margin: auto auto 0 0;
   width: 200px;
   height: 200px;
 }
@@ -25,14 +26,15 @@ td {
 
 #result {
   color: #fff;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 100;
   text-align: right;
-  padding-right: 20px;
+  padding-bottom: 0;
+  padding-right: 14px;
   position: absolute;
   bottom: 240px;
   right: 0;
-  width: 209px;
+  width: 215px;
   height: 79px;
   background-color: #999;
   -webkit-border-radius: 5px 5px 0 0;
@@ -44,6 +46,10 @@ td {
 
 .number, .nan {
   font-size: 22px;
+}
+
+.number:active, .d:active {
+  background-color: #b2b2b2;
 }
 
 .number, .d, .keyTop, .cal {
@@ -60,6 +66,11 @@ td {
 .keyTop {
   border: 1px solid #8e8e8e;
   background-color: #d6d6d6;
+  font-size: 18px;
+}
+
+.keyTop:active {
+  background-color: #a9a9a9;
 }
 
 .cal {
@@ -68,6 +79,11 @@ td {
   border-bottom: none;
   border-left: none;
   color: #fff;
+}
+
+.cal:active {
+  background-color: #c47325;
+  color: #686868;
 }
 
 .calOne {
@@ -102,4 +118,17 @@ td {
   width: 116px;
   border-right: none;
   border-radius: 0 0 0 5px;
+}
+
+#bd {
+  width: 232px;
+  height: 321px;
+  border-radius: 5px;
+  box-shadow: 1px 20px 100px 10px #8c8c8c;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
