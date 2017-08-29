@@ -61,11 +61,11 @@ for (let i = 0;i < button.length;i++) {
 }
 function valueListen() {
     if (screen.value.length > 8) {
-        screen.style.fontSize = '35px';
+        screen.style.fontSize = '38px';
         if (screen.value.length > 10) {
-            screen.style.fontSize = '25px';
+            screen.style.fontSize = '28px';
             if (screen.value.length > 15) {
-                screen.style.fontSize = '15px';
+                screen.style.fontSize = '18px';
             }
         }
     }

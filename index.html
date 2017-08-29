@@ -3,46 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/calculation.css">
 </head>
 <body>
     <div id="container">
-        <div class="top">
-            <input type="text" id="result" disabled value="0" />
-        </div>
-        <div class="oneFloor">
-            <button class="btn nan keyTop ac" value="AC" >AC</button>
-            <button class="btn nan keyTop pm" value="+/-" >+/-</button>
-            <button class="btn nan keyTop percent" value="%" >%</button>
-            <button class="btn nan cal calOne" value="/" >÷</button>
-        </div>
-        <div class="twoFloor">
-            <input type="button" class="btn number seven" value="7" />
-            <!--<button class="btn number seven" value="7" >7</button>-->
-            <button class="btn number eight" value="8" >8</button>
-            <button class="btn number nine" value="9" >9</button>
-            <button class="btn nan cal calTwo" value="*" >×</button>
-        </div>
-        <div class="threeFloor">
-            <button class="btn number four" value="4" >4</button>
-            <button class="btn number five" value="5" >5</button>
-            <button class="btn number six" value="6" >6</button>
-            <button class="btn nan cal calThree" value="-" >—</button>
-        </div>
-        <div class="fourFloor">
-            <button class="btn number one" value="1" >1</button>
-            <button class="btn number two" value="2" >2</button>
-            <button class="btn number three" value="3" >3</button>
-            <button class="btn nan cal calFour" value="+" >+</button>
-        </div>
-        <div class="lastFloor">
-            <button class="btn number zero" value="0" >0</button>
-            <button class="btn nan d" value="." >.</button>
-            <button class="btn cal calLast" value="=" >=</button>
+        <div id="bd">
+            <table>
+                <input type="text" id="result" disabled value="0" />
+                <tr>
+                    <td><button id="ac" class="btn nan keyTop ac" value="AC">AC</button></td>
+                    <td><button class="btn nan keyTop pm" value="+/-" >+/-</button></td>
+                    <td><button class="btn nan keyTop percent" value="%" >%</button></td>
+                    <td><button class="btn nan cal calOne" value="/" >÷</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn number seven" value="7" >7</button></td>
+                    <td><button class="btn number eight" value="8" >8</button></td>
+                    <td><button class="btn number nine" value="9" >9</button></td>
+                    <td><button class="btn nan cal calTwo" value="*" >×</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn number four" value="4" >4</button></td>
+                    <td><button class="btn number five" value="5" >5</button></td>
+                    <td><button class="btn number six" value="6" >6</button></td>
+                    <td><button class="btn nan cal calThree" value="-">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn number one" value="1">1</button></td>
+                    <td><button class="btn number two" value="2">2</button></td>
+                    <td><button class="btn number three" value="3">3</button></td>
+                    <td><button class="btn nan cal calFour" value="+">+</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="btn number zero" value="0">0</button></td>
+                    <td><button class="btn nan d" value=".">.</button></td>
+                    <td><button class="btn nan cal calLast" value="=">=</button></td>
+                </tr>
+            </table>
         </div>
     </div>
-    <script src="js/common.js"></script>
     <script src="js/CalcEval.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>
