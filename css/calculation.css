@@ -4,7 +4,7 @@
 
 #result {
   text-align: right;
-  width: 214px;
+  width: 228px;
   height: 77px;
   background-color: #999;
   border: 1px solid #8e8e8e;
@@ -12,7 +12,6 @@
   color: #fff;
   font-size: 48px;
   font-weight: 200;
-  padding-right: 15px;
   border-radius: 5px 5px 0 0;
 }
 
