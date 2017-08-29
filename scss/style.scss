@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'SS Pro';
+  src: url("../fonts/SourceSansPro-Regular.ttf");
+}
+*{
+  outline: none;
+}
+html{
+  height: 100%;
+}
+body{
+  height: 100%;
+}
+#container{
+  width: 232px;
+  height: 310px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.btn{
+  width: 58px;
+  height: 46px;
+  border: 1px solid #8e8e8e;
+  font: 22px/10px 'SS Pro';
+}
+#result{
+  height: 78px;
+  width: 214px;
+  background-color: #999;
+  border: 1px solid #828282;
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+  font-size: 48px;
+  color: #fff;
+  text-align: right;
+  font-weight: 100;
+  padding-right: 15px;
+}
+.number,.d{
+  background-color: #e0e0e0;
+}
+.keyTop{
+  background-color: #d6d6d6;
+}
+.cal{
+  background-color: #f69331;
+  color: #ffffff;
+}
+%left{
+  float: left;
+}
+%border1{
+  border-right: none;
+  border-bottom: none;
+}
+%border2{
+  border-bottom: none;
+}
+.eight{
+  @extend %left;
+  @extend %border1;
+}
+.seven{
+  @extend %left;
+  @extend %border1;
+}
+.five{
+  @extend %left
+}
+.nine{
+  @extend %left;
+  @extend %border1;
+}
+.four{
+  @extend %left;
+  @extend %border1;
+}
+.five{
+  @extend %border1;
+}
+
+
+.ac{
+  @extend %left;
+  @extend %border1;
+}
+.percent{
+  @extend %left;
+  @extend %border1;
+}
+.pm{
+  @extend %left;
+  @extend %border1;
+}
+.six{
+  @extend %left;
+  @extend %border1;
+}
+
+.one{
+  @extend %left;
+  @extend %border1;
+}
+.two{
+  @extend %left;
+  @extend %border1;
+}
+.three{
+  @extend %left;
+  @extend %border1;
+}
+.zero{
+  @extend %left;
+  width: 58 *2px;
+  border-radius: 0 0 0 5px;
+  border-right: none;
+}
+.d{
+  @extend %left;
+  border-right: none;
+}
+.calLast{
+  @extend %left;
+  border-radius: 0 0 5px 0;
+}
+.calOne{
+  @extend %border2;
+}
+.calTwo{
+  @extend %border2;
+}
+.calThree{
+  @extend %border2;
+}
+.calFour{
+  @extend %border2;
+}
+.lastFloor{
+  height: 46px;
+}
+
+

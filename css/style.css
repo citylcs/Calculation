@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'SS Pro';
+  src: url("../fonts/SourceSansPro-Regular.ttf");
+}
+
+* {
+  outline: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#container {
+  width: 232px;
+  height: 310px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.btn {
+  width: 58px;
+  height: 46px;
+  border: 1px solid #8e8e8e;
+  font: 22px/10px 'SS Pro';
+}
+
+#result {
+  height: 78px;
+  width: 214px;
+  background-color: #999;
+  border: 1px solid #828282;
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+  font-size: 48px;
+  color: #fff;
+  text-align: right;
+  font-weight: 100;
+  padding-right: 15px;
+}
+
+.number, .d {
+  background-color: #e0e0e0;
+}
+
+.keyTop {
+  background-color: #d6d6d6;
+}
+
+.cal {
+  background-color: #f69331;
+  color: #ffffff;
+}
+
+.eight, .seven, .five, .nine, .four, .ac, .percent, .pm, .six, .one, .two, .three, .zero, .d, .calLast {
+  float: left;
+}
+
+.eight, .seven, .nine, .four, .five, .ac, .percent, .pm, .six, .one, .two, .three {
+  border-right: none;
+  border-bottom: none;
+}
+
+.calOne, .calTwo, .calThree, .calFour {
+  border-bottom: none;
+}
+
+.zero {
+  width: 116px;
+  border-radius: 0 0 0 5px;
+  border-right: none;
+}
+
+.d {
+  border-right: none;
+}
+
+.calLast {
+  border-radius: 0 0 5px 0;
+}
+
+.lastFloor {
+  height: 46px;
+}
